@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import { SideBar } from './components';
 
 class Container extends Component {
     render(){
         return (
-            <div className="container-fluid h-100">
-            <div className="row justify-content-center h-100">
-                <SideBar />
-                <div className="col-12 col-md-9" style={{ backgroundColor: "green" }}>
-                    Elements
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        {this.props.children}
+                    </div>
                 </div>
             </div>
-          </div>
         );
     };
 };
