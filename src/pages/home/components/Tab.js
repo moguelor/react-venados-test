@@ -17,15 +17,15 @@ const styles = {
     tab: css({
         padding : 12,
         fontSize: 12,
-        cursor: 'pointer'
+        cursor: 'pointer',
     }),
     active: css({
-        backgroundColor: "#257700",
-        boxShadow: "0px 2px 3px rgba(0, 0, 0, .3)",
-        color: "#fff"
+        backgroundColor: "#fac000",
     }),
     inactive: css({
-        border : "1px solid #a3a5a9"
+        backgroundColor: "#fac000",
+        border : "1px solid #fac000",
+        opacity : ".7"
     })
 }
 
