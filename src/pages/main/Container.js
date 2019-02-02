@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import home from '../home';
 
 const Home = () => {
     return <div>Home</div>
@@ -16,9 +17,14 @@ class Container extends Component {
         return (
             <Router>
                 <div>
-                    <Route exact path="/" component={Home} />
-                    <Route path="/statics" component={Statics} />
-                    <Route path="/players" component={Players} />
+                    <div>
+                        SideBar
+                    </div>
+                    <div>
+                        <Route exact path="/" component={home.Container} />
+                        <Route path="/statics" component={Statics} />
+                        <Route path="/players" component={Players} />
+                    </div>
                 </div>
             </Router>
         );
