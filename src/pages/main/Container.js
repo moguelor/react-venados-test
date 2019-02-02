@@ -14,7 +14,7 @@ class Container extends Component {
         return (
             <Router>
                 <div>
-                    <div>
+                    <div className="container-fluid">
                         <Route exact path="/" component={home.Container} />
                         <Route path="/statics" component={Statics} />
                         <Route path="/players" component={Players} />
