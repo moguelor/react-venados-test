@@ -6,7 +6,7 @@ const Loading = () => {
         <div className="text-center">
             <span className={`fa fa-circle-o-notch fa-spin ${styles.loading}`} />
             <br />
-            Cargando partidos...
+            Cargando, porfavor espere...
             </div>
     );
 }

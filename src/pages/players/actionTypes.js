@@ -1,0 +1,5 @@
+import {NAME} from './constants';
+
+export const FETCH_PLAYERS = `${NAME}/FETCH_PLAYERS`;
+export const FETCH_PLAYERS_SUCCESS = `${NAME}/FETCH_PLAYERS_SUCCESS`;
+export const FETCH_PLAYERS_FAILURE = `${NAME}/FETCH_PLAYERS_FAILURE`;

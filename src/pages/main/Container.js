@@ -3,10 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {NotFound} from './components';
 import home from '../home';
 import statistics from '../statistics';
-
-const Players = () => {
-    return <div>Jugadores</div>
-};
+import players from '../players';
 
 class Container extends Component {
     render() {
@@ -17,7 +14,7 @@ class Container extends Component {
                     <Switch>
                         <Route exact path="/" component={home.Container} />
                         <Route exact path="/statistics" component={statistics.Container} />
-                        <Route exact path="/players" component={Players} />
+                        <Route exact path="/players" component={players.Container} />
                         <Route component={NotFound} />
                     </Switch>
                     </div>
