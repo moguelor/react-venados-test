@@ -16,7 +16,7 @@ const Tab = ({text, isActive, handleClick}) => {
 const styles = {
     tab: css({
         padding : 12,
-        fontSize: 12,
+        fontSize: 15,
         cursor: 'pointer',
     }),
     active: css({

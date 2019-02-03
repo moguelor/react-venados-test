@@ -28,7 +28,7 @@ const styles = {
         backgroundColor: "#7f7f7f",
         color: "#fff",
         padding: "5px 15px 5px",
-        fontSize: 15
+        fontSize: 14
     })
 }
 
