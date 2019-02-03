@@ -30,11 +30,6 @@ class Container extends Component {
         return (
             <div>
                 <div className="row">
-                    <div className="col">
-                        icono
-                    </div>
-                </div>
-                <div className="row">
                     <Logo srcImage={IMG_URL_VENADOS} />
                 </div>
                 <div className="row text-center">

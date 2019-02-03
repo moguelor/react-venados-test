@@ -12,7 +12,8 @@ const RowInformation = ({title, value}) => {
 
 const styles = {
     title: css({
-        fontSize: 15
+        fontSize: 15,
+        fontWeight: 600
     }),
     value: css({
         fontSize: 12

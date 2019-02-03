@@ -33,7 +33,6 @@ const ModalPlayer = ({ isOpen, handleClickClose, player }) => {
                 onRequestClose={handleClickClose}
                 style={customStyleModal}
             >
-
                 <HeaderModal
                     image={image}
                     fullName={`${name} ${first_surname} ${second_surname}`}

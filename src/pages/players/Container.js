@@ -26,9 +26,6 @@ class Container extends Component{
                     handleClickClose = {closeModal}
                     player = {player}
                 />
-                <div>
-                    Icono
-                </div>
                 {
                     isFetching 
                         ? <Loading />

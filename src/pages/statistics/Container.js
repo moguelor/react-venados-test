@@ -19,9 +19,6 @@ export class Container extends Component{
 
         return (
             <div>
-                <div>
-                    Icono
-                </div>
                 <TopBar />
                 {
                     isFetching 
