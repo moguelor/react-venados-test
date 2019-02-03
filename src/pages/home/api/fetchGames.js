@@ -4,7 +4,7 @@ import {FETCH_GAMES, FETCH_GAMES_SUCCESS, FETCH_GAMES_FAILURE} from '../actionTy
 import moment from 'moment';
 
 /** Obtener los juegos. */
-export default function fetchGames(id) {
+export default function fetchGames() {
     return (dispatch) => {
         return dispatch({
             [RSAA]: {

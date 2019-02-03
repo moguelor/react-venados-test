@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'glamor';
 import GameList from './GameList';
-import Loading from './Loading';
+import {Loading} from '../../../common/components';
 
 const MatchList = ({ items, showLoading }) => {
 
