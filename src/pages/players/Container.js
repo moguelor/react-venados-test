@@ -3,7 +3,9 @@ import { Grid } from './components';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import api from './api';
+import actions from './actions';
 import * as selectors from './selectors';
+import {ModalPlayer} from './components';
 import {Loading} from '../../common/components';
 
 class Container extends Component{
@@ -15,10 +17,15 @@ class Container extends Component{
 
     render(){
 
-        const {data, isFetching} = this.props;
+        const {players, player, isFetching, isOpenModal, closeModal, selectPlayer} = this.props;
 
         return (
             <div>
+                <ModalPlayer 
+                    isOpen = {isOpenModal}
+                    handleClickClose = {closeModal}
+                    player = {player}
+                />
                 <div>
                     Icono
                 </div>
@@ -26,7 +33,8 @@ class Container extends Component{
                     isFetching 
                         ? <Loading />
                         : <Grid 
-                            data = {data}
+                            data = {players}
+                            handleClickPlayer={selectPlayer}
                         />
                 }
             </div>
@@ -36,12 +44,16 @@ class Container extends Component{
 
 const mapStateToProps = createStructuredSelector({
     isFetching : selectors.getIsFetching,
-    data : selectors.getData
+    players : selectors.getData,
+    player: selectors.getPlayer,
+    isOpenModal : selectors.getIsOpenModal
 });
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        fetchPlayers: () => dispatch(api.fetchPlayers())
+        fetchPlayers: () => dispatch(api.fetchPlayers()),
+        closeModal: () => dispatch(actions.closeModal()),
+        selectPlayer: (player) => dispatch(actions.selectPlayer(player))
     };
 };
 

@@ -1,4 +1,9 @@
 html,body,#root {
     height: 100%;
     font-size: 12px;
+    font-family: 'opensans'
+}
+
+body.ReactModal__Body--open {
+    overflow: hidden;
 }
