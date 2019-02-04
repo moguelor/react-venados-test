@@ -3,7 +3,7 @@ import {css} from 'glamor';
 
 const HeaderBar = ({handleClick, text}) => {
     return (
-        <div className="row align-items-center">
+        <div className={`row align-items-center ${styles.container}`}>
                 <div className={`col-1`} onClick={handleClick}><span className={`fa fa-bars ${styles.icon}`} /> </div>
                 <div className={`col ${styles.title}`}>{text}</div>
         </div>
@@ -20,6 +20,9 @@ const styles = {
     title : css({
         fontSize: 25,
         marginLeft: 20
+    }),
+    container: css({
+        backgroundColor:"#fff"
     })
 }
 

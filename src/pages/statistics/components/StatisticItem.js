@@ -34,18 +34,30 @@ const styles = {
     }),
     image: css({
         width: 60,
+        '@media(min-width: 576px)': {
+            width: 110,
+        }
     }),
     position: css({
         fontSize: 35,
-        color: "#fff"
+        color: "#fff",
+        '@media(min-width: 576px)': {
+            position: 45,
+        }
     }),
     nameTeam: css({
         fontSize: 15,
-        color: "#fff"
+        color: "#fff",
+        '@media(min-width: 576px)': {
+            fontSize: 18,
+        }
     }),
     number: css({
         fontSize: 17,
-        color: "#fff"
+        color: "#fff",
+        '@media(min-width: 576px)': {
+            fontSize: 22,
+        }
     })
 }
 

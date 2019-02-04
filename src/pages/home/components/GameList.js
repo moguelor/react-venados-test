@@ -20,15 +20,15 @@ const GameList = ({ games }) => {
             {
                 games.map(({dayName, dayNumber, opponentImage, localImage, opponent, homeScore, awayScore, localName, startAt, endsAt}, index) => {
                     return (
-                        <div key={`game-list-${index}`} className={`row align-items-center ${styles.container}`}>
-                            <div className={`col ${styles.day}`}>
+                        <div key={`game-list-${index}`} className={`row align-items-center justify-content-center ${styles.container}`}>
+                            <div className={`col col-md-12 ${styles.day}`}>
                                 <a  target="_blank"  href={getLink(localName, opponent, startAt, endsAt)}>
                                     <span className={`fa fa-calendar ${styles.icon}`} /><br/>
                                     {dayNumber} <br/>
                                     {dayName}
                                 </a>
                             </div>
-                            <div className="col">
+                            <div className="col col-md-2">
                                 <img 
                                     alt="" 
                                     className={styles.image} 
@@ -36,8 +36,8 @@ const GameList = ({ games }) => {
                                 /> 
                                 <div>{localName}</div>
                             </div>
-                            <div className={`col ${styles.score}`}>{homeScore} - {awayScore}</div>
-                            <div className="col">
+                            <div className={`col col-md-3 ${styles.score}`}>{homeScore} - {awayScore}</div>
+                            <div className="col col-md-2">
                                 <img 
                                     alt="" 
                                     className={styles.image} 
@@ -71,7 +71,10 @@ const styles = {
     }),
     image: css({
         width : 54,
-        marginBottom: 10
+        marginBottom: 10,
+        '@media(min-width: 768px)': {
+            width : 100,
+        }
     }),
     score: css({
         fontSize: 45,

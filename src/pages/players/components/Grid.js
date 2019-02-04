@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Figure from './Figure';
+import { css } from 'glamor';
 
 const Grid = ({ data, handleClickPlayer }) => {
     return (
-        <div className={`row`}>
+        <div className={`row ${styles.container}`}>
             {
                 data.map((player, index) => {
 
@@ -23,6 +24,12 @@ const Grid = ({ data, handleClickPlayer }) => {
             }
         </div>
     );
+}
+
+const styles = {
+    container: css({
+        backgroundColor: '#fff'
+    })
 }
 
 Grid.propTypes = {

@@ -28,7 +28,9 @@ const MatchList = ({ items, showLoading }) => {
                 items.map(({ month, games }, index) => {
                     return (
                         <div key={`match-list-${index}`} className="col-12">
-                            <div className={`row ${styles.monthBar}`}>{month}</div>
+                            <div className={`row ${styles.containerMonthBar} `}>
+                                <div className={`${styles.monthBar} col`}>{month}</div>
+                            </div>
                             <GameList games={games} />
                         </div>
                     );
@@ -42,11 +44,20 @@ const styles = {
     container: css({
         backgroundColor: "#257700"
     }),
-    monthBar: css({
+    containerMonthBar : css({
         backgroundColor: "#7f7f7f",
         color: "#fff",
         padding: "5px 15px 5px",
-        fontSize: 14
+        fontSize: 14,
+        '@media(min-width: 576px)': {
+            fontSize: 20,
+        }
+    }),
+    monthBar: css({
+        '@media(min-width: 576px)': {
+            fontSize: 20,
+            textAlign: "center"
+        }
     }),
     noResult: css({
         marginTop: 15,

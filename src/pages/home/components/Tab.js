@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Tab = ({text, isActive, handleClick}) => {
     return (
         <div 
-            className={`col ${css(styles.tab, isActive ? styles.active : styles.inactive)}`}
+            className={`col-6 ${css(styles.tab, isActive ? styles.active : styles.inactive)}`}
             onClick = {handleClick}
         >
             {text}

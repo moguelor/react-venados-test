@@ -3,7 +3,7 @@ import { css } from 'glamor';
 
 const Figure = ({image, position, name, handleClick}) => {
     return (
-        <div className={`col-6 col-sm-4 text-center ${styles.item}`} onClick={handleClick}>
+        <div className={`col-6 col-sm-4 col-md-3 col-lg-2 text-center ${styles.item}`} onClick={handleClick}>
             <div className={styles.figure}>
                 <img alt="" src={image} className={`${styles.image}`} />
             </div>

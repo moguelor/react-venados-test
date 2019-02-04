@@ -15,7 +15,7 @@ class Container extends Component {
         const {redirect, isOpenSidebar, hideSidebar, showSidebar, location, history} = this.props;
         return (
             <Router history={history}>
-                    <div className="container-fluid">
+                    <div className="container">
                     <HeaderBar 
                         handleClick = {showSidebar}
                         text= {location == '/players' ? 'Jugadores' : ''}

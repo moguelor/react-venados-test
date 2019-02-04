@@ -1,7 +1,12 @@
-html,body,#root {
-    height: 100%;
+html,body, #root{
     font-size: 12px;
-    font-family: 'opensans'
+    font-family: 'opensans';
+    height : 100%;
+}
+
+#root{
+    background-color:rgb(185,185,185, .05);
+    min-height: 100vh;
 }
 
 body.ReactModal__Body--open {

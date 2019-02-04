@@ -12,11 +12,14 @@ const Logo  = ({srcImage}) => {
 
 const styles = {
     containerImage : css({
-        padding : "0px 15px 15px 15px"
+        padding : "0px 15px 15px 15px",
+        backgroundColor:"#fff"
     }),
     logo : css({
         width : 175,
-        height: 175
+        '@media(min-width: 768px)': {
+            width : 225,
+        }
     })
 }
 
