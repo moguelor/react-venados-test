@@ -86,6 +86,5 @@ function formatResponse(data){
             games : data[item]
         });
     }
-    console.log(response);
     return response;
 }

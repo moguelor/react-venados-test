@@ -12,7 +12,7 @@ const Logo  = ({srcImage}) => {
 
 const styles = {
     containerImage : css({
-        padding : 15
+        padding : "0px 15px 15px 15px"
     }),
     logo : css({
         width : 125,
