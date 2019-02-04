@@ -21,8 +21,8 @@ ReactDOM.render(
     </AppContainer>
     , document.getElementById('root'));
 
-console.log('historyIndex', history);
-if (module.hot) {
+
+    if (module.hot) {
     module.hot.accept('./pages/main/Container', () => {
         render(
             <AppContainer>

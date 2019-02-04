@@ -18,6 +18,7 @@ class Container extends Component {
                     <div className="container-fluid">
                     <HeaderBar 
                         handleClick = {showSidebar}
+                        text= {location == '/players' ? 'Jugadores' : ''}
                     />
                     <SideBar 
                         isOpen={isOpenSidebar} 
