@@ -49,7 +49,8 @@ const styles = {
         fontSize: 14
     }),
     noResult: css({
-        marginTop: 15
+        marginTop: 15,
+        fontSize: 14
     })
 }
 

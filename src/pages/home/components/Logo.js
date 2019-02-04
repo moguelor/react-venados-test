@@ -15,8 +15,8 @@ const styles = {
         padding : "0px 15px 15px 15px"
     }),
     logo : css({
-        width : 125,
-        height: 125
+        width : 175,
+        height: 175
     })
 }
 

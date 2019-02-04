@@ -60,21 +60,24 @@ const styles = {
         padding: "20px 0px 20px 0px"
     }),
     icon: css({
-        fontSize: 30
+        fontSize: 24
     }),
     day: css({
-        fontSize: 20,
+        fontSize: 17,
         fontWeight: 300,
         '& a' : {
             color: '#fff'
         }
     }),
     image: css({
-        width : 64,
+        width : 54,
         marginBottom: 10
     }),
     score: css({
-        fontSize: 35
+        fontSize: 45,
+        '@media(max-width: 576px)': {
+            fontSize: 25,
+        }
     })
 };
 
