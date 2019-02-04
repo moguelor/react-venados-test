@@ -67,7 +67,9 @@ function groupByMonth(games){
             opponentImage : !game.local ? IMG_URL_VENADOS : game.opponent_image,
             opponent : !game.local ? 'Venados F.C.' : game.opponent,
             homeScore : game.home_score,
-            awayScore : game.away_score
+            awayScore : game.away_score,
+            startAt: moment(game.datetime).format('YYYYMMDDTHHmmss'),
+            endsAt: moment(game.datetime).add(90, 'minutes').format('YYYYMMDDTHHmmssz')
         };
 
         groups[month]= groups[month] || [];

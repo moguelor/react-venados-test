@@ -2,17 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {css} from 'glamor';
 
+/** Da formato al link. */
+const getLink = (localName, opponent, startAt, endsAt) => {
+
+    let link = 'https://www.google.com/calendar/render?action=TEMPLATE';
+    link += `&text=Partido+${localName}+vs+${opponent}`;
+    link += `&dates=${startAt}/${endsAt}`;
+    link += `&details=Apoya+a+tu+equipo+favorito`;
+    link += `&location=Merida+Yucatan`
+
+    return link;
+}
+
 const GameList = ({ games }) => {
     return (
         <div>
             {
-                games.map(({dayName, dayNumber, opponentImage, localImage, opponent, homeScore, awayScore, localName}, index) => {
+                games.map(({dayName, dayNumber, opponentImage, localImage, opponent, homeScore, awayScore, localName, startAt, endsAt}, index) => {
                     return (
                         <div key={`game-list-${index}`} className={`row align-items-center ${styles.container}`}>
                             <div className={`col ${styles.day}`}>
-                                <span className={`fa fa-calendar ${styles.icon}`} /><br/>
-                                {dayNumber} <br/>
-                                {dayName}
+                                <a  target="_blank"  href={getLink(localName, opponent, startAt, endsAt)}>
+                                    <span className={`fa fa-calendar ${styles.icon}`} /><br/>
+                                    {dayNumber} <br/>
+                                    {dayName}
+                                </a>
                             </div>
                             <div className="col">
                                 <img 
@@ -50,7 +64,10 @@ const styles = {
     }),
     day: css({
         fontSize: 20,
-        fontWeight: 300
+        fontWeight: 300,
+        '& a' : {
+            color: '#fff'
+        }
     }),
     image: css({
         width : 64,
