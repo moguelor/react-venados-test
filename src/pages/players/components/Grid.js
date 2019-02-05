@@ -8,16 +8,14 @@ const Grid = ({ data, handleClickPlayer }) => {
         <div className={`row ${styles.container}`}>
             {
                 data.map((player, index) => {
-
-                    const {image, position, name, } = player;
-
+                    const { image, position, name, } = player;
                     return (
                         <Figure
                             key={`grid-${index}`}
-                            image = {image}
-                            position = {position}
-                            name = {name}
-                            handleClick= {() => handleClickPlayer(player)}
+                            image={image}
+                            position={position}
+                            name={name}
+                            handleClick={() => handleClickPlayer(player)}
                         />
                     );
                 })
@@ -34,9 +32,9 @@ const styles = {
 
 Grid.propTypes = {
     /** Información necesaria. */
-    data: PropTypes.array
+    data: PropTypes.array,
+    /** Evento click al seleccionar al jugador. */
+    handleClickPlayer: PropTypes.func
 }
-
-
 
 export default Grid;

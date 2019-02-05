@@ -1,6 +1,7 @@
-import {CLOSE_MODAL} from '../actionTypes';
+import { CLOSE_MODAL } from '../actionTypes';
 
-export default function closeModal(){
+/** Acción para cerrar el modal. */
+export default function closeModal() {
     return {
         type: CLOSE_MODAL,
         payload: false

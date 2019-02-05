@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import moment from 'moment';
 import HeaderModal from './HeaderModal';
@@ -24,7 +25,19 @@ const customStyleModal = {
 
 const ModalPlayer = ({ isOpen, handleClickClose, player }) => {
 
-    const { image, name, position, first_surname, second_surname, birthday, weight, height, birth_place, number, last_team } = player;
+    const { 
+        image, 
+        name, 
+        position, 
+        first_surname, 
+        second_surname, 
+        birthday, 
+        weight, 
+        height, 
+        birth_place, 
+        number, 
+        last_team 
+    } = player;
 
     return (
         <div>
@@ -50,6 +63,17 @@ const ModalPlayer = ({ isOpen, handleClickClose, player }) => {
             </Modal>
         </div>
     );
+};
+
+ModalPlayer.propTypes = {
+    /** Evento al cerrar el modal. */
+    handleClickClose: PropTypes.func,
+
+    /** Bandera para saber si el modal esta abierto o no. */
+    isOpen: PropTypes.bool,
+
+    /** Jugador */
+    player: PropTypes.object
 };
 
 export default ModalPlayer;

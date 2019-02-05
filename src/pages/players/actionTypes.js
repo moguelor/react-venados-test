@@ -1,4 +1,4 @@
-import {NAME} from './constants';
+import { NAME } from './constants';
 
 export const FETCH_PLAYERS = `${NAME}/FETCH_PLAYERS`;
 export const FETCH_PLAYERS_SUCCESS = `${NAME}/FETCH_PLAYERS_SUCCESS`;

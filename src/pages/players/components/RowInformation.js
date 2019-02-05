@@ -1,7 +1,8 @@
 import React from 'react';
-import {css} from 'glamor';
+import PropTypes from 'prop-types';
+import { css } from 'glamor';
 
-const RowInformation = ({title, value}) => {
+const RowInformation = ({ title, value }) => {
     return (
         <div className={`col-12`}>
             <div className={styles.title}>{title}</div>
@@ -19,5 +20,12 @@ const styles = {
         fontSize: 12
     })
 };
+
+RowInformation.propTypes = {
+    /** Etiqueta */
+    title: PropTypes.string,
+    /** Valor */
+    value: PropTypes.string
+}
 
 export default RowInformation;

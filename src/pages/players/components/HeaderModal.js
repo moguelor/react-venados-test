@@ -1,5 +1,6 @@
 import React from 'react';
-import {css} from 'glamor';
+import PropTypes from 'prop-types';
+import { css } from 'glamor';
 
 const HeaderModal = ({ image, fullName, position }) => {
     return (
@@ -9,7 +10,11 @@ const HeaderModal = ({ image, fullName, position }) => {
             </div>
             <div className={`col-12`}>
                 <div className={styles.figure}>
-                    <img alt="" src={image} className={`${styles.image}`} />
+                    <img
+                        alt=""
+                        src={image}
+                        className={`${styles.image}`}
+                    />
                 </div>
                 <div className={styles.name}>{fullName}</div>
                 <div className={styles.position}>{position}</div>
@@ -26,7 +31,7 @@ const styles = {
     }),
     label: css({
         fontSize: 25,
-        marginBottom : 15
+        marginBottom: 15
     }),
     name: css({
         margin: "-10px 0px 15px",
@@ -48,5 +53,16 @@ const styles = {
         height: "auto"
     })
 };
+
+HeaderModal.propTypes = {
+    /** Dirección de la imagen. */
+    image: PropTypes.string,
+
+    /** Nombre completo */
+    fullName: PropTypes.string,
+
+    /** Posición */
+    position: PropTypes.string
+}
 
 export default HeaderModal;

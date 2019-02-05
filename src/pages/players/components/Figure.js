@@ -1,11 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { css } from 'glamor';
 
-const Figure = ({image, position, name, handleClick}) => {
+const Figure = ({ image, position, name, handleClick }) => {
     return (
-        <div className={`col-6 col-sm-4 col-md-3 col-lg-2 text-center ${styles.item}`} onClick={handleClick}>
+        <div
+            className={`col-6 col-sm-4 col-md-3 col-lg-2 text-center ${styles.item}`}
+            onClick={handleClick}>
             <div className={styles.figure}>
-                <img alt="" src={image} className={`${styles.image}`} />
+                <img
+                    alt=""
+                    src={image}
+                    className={`${styles.image}`}
+                />
             </div>
             <div className={styles.text}>{position}</div>
             <div className={styles.text}>{name}</div>
@@ -16,7 +23,7 @@ const Figure = ({image, position, name, handleClick}) => {
 const styles = {
     item: css({
         marginTop: 20,
-        cursor : 'pointer'
+        cursor: 'pointer'
     }),
     figure: css({
         width: 150,
@@ -32,6 +39,17 @@ const styles = {
     text: css({
         fontSize: 15
     })
+}
+
+Figure.propTypes = {
+    /** Evento click. */
+    handleClick: PropTypes.func,
+    /** Dirección de la imagen */
+    image: PropTypes.string,
+    /** Posición */
+    position: PropTypes.string,
+    /** Nombre del jugador*/
+    name: PropTypes.string,
 }
 
 export default Figure;

@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { css } from 'glamor';
-import moment from 'moment';
 import RowInformation from './RowInformation';
 
 const PersonalInformation = ({ birthday, birth_place, weight, height, number, last_team }) => {
@@ -39,6 +39,21 @@ const styles = {
         backgroundColor: "#fff",
         minHeight: 300
     })
+};
+
+PersonalInformation.propTypes = {
+    /** Nacimiento */
+    birthday: PropTypes.string,
+    /** Lugar de nacimiento */
+    birth_place: PropTypes.string,
+    /** Peso */
+    weight: PropTypes.number,
+    /** Altura */
+    height: PropTypes.number,
+    /** Número de playera */
+    number: PropTypes.number,
+    /** Último equipo */
+    last_team: PropTypes.number
 };
 
 export default PersonalInformation;
