@@ -30,7 +30,7 @@ Se utiliza la metodologia llamada _"Structure By Features"_ para la organizació
 │       ├── actions           # Acciones de redux. Listado de las diferentes acciones que pueden ocurrir en la aplicación.
 │           ├── index.js      # Punto de entrada para exponer todas las acciones.
 │       ├── api               # Acciones que llaman algún servicio api.
-│           ├── index.js      # Punto de entrada para exponer todas las acciones.
+│           ├── index.js      # Punto de entrada para exponer todas las acciones api.
 │       ├── components        # Componentes del módulo.
 │           ├── index.js      # Punto de entrada para exponer todos los componentes.
 │       ├── actionTypes.js    # Constantes que identifican las acciones a realizar.
