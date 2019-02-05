@@ -27,7 +27,7 @@ class Container extends Component {
                 <div className="container">
                     <HeaderBar
                         handleClick={showSidebar}
-                        text={location == '/players' ? 'Jugadores' : ''}
+                        text={location === '/players' ? 'Jugadores' : ''}
                     />
                     <SideBar
                         isOpen={isOpenSidebar}

@@ -25,7 +25,10 @@ RowInformation.propTypes = {
     /** Etiqueta */
     title: PropTypes.string,
     /** Valor */
-    value: PropTypes.string
-}
+    value: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ])
+};
 
 export default RowInformation;

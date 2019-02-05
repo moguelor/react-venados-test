@@ -53,7 +53,7 @@ PersonalInformation.propTypes = {
     /** Número de playera */
     number: PropTypes.number,
     /** Último equipo */
-    last_team: PropTypes.number
+    last_team: PropTypes.string
 };
 
 export default PersonalInformation;

@@ -45,6 +45,7 @@ const ModalPlayer = ({ isOpen, handleClickClose, player }) => {
                 isOpen={isOpen}
                 onRequestClose={handleClickClose}
                 style={customStyleModal}
+                ariaHideApp={false}
             >
                 <HeaderModal
                     image={image}

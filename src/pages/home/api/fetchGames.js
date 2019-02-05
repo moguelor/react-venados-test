@@ -49,7 +49,7 @@ const onSuccess = (action, state, res) => {
 /** Filtra los juegos por liga. */
 function filterGamesByLeague(games, league) {
     return games.filter((game) => {
-        return game.league == league;
+        return game.league === league;
     });
 }
 

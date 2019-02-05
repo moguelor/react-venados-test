@@ -12,7 +12,7 @@ const MatchList = ({ items, showLoading }) => {
         );
     }
 
-    if (items.length == 0) {
+    if (items.length === 0) {
         return (
             <div className={`row ${styles.noResult}`}>
                 <div className="col text-center">
@@ -73,7 +73,7 @@ MatchList.propTypes = {
     items: PropTypes.array,
 
     /** Mostrar loading. */
-    showLoading: PropTypes.true
+    showLoading: PropTypes.bool
 };
 
 export default MatchList;

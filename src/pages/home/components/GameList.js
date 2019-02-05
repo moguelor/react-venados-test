@@ -24,6 +24,7 @@ const GameList = ({ games }) => {
                             className={`row align-items-center justify-content-center ${styles.container}`}>
                             <div className={`col col-md-12 ${styles.day}`}>
                                 <a
+                                    rel="noopener noreferrer"
                                     target="_blank"
                                     href={getLink(localName, opponent, startAt, endsAt)}
                                 >

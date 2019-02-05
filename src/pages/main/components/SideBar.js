@@ -27,17 +27,17 @@ const SideBar = ({ isOpen, handleClickClose, location, redirect }) => {
                             <LinkItem
                                 label="Inicio"
                                 onClick={() => redirect('/')}
-                                isSelected={location == '/'}
+                                isSelected={location === '/'}
                             />
                             <LinkItem
                                 label="Estadisticas"
                                 onClick={() => redirect('/statistics')}
-                                isSelected={location == '/statistics'}
+                                isSelected={location === '/statistics'}
                             />
                             <LinkItem
                                 label="Jugadores"
                                 onClick={() => redirect('/players')}
-                                isSelected={location == '/players'}
+                                isSelected={location === '/players'}
                             />
                         </div>
                         <div
