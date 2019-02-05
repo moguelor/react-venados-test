@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'glamor';
 import GameList from './GameList';
-import {Loading} from '../../../common/components';
+import { Loading } from '../../../common/components';
 
 const MatchList = ({ items, showLoading }) => {
 
-    if(showLoading){
+    if (showLoading) {
         return (
             <Loading />
         );
     }
 
-    if(items.length == 0){
+    if (items.length == 0) {
         return (
             <div className={`row ${styles.noResult}`}>
                 <div className="col text-center">
@@ -27,7 +27,10 @@ const MatchList = ({ items, showLoading }) => {
             {
                 items.map(({ month, games }, index) => {
                     return (
-                        <div key={`match-list-${index}`} className="col-12">
+                        <div
+                            key={`match-list-${index}`}
+                            className="col-12"
+                        >
                             <div className={`row ${styles.containerMonthBar} `}>
                                 <div className={`${styles.monthBar} col`}>{month}</div>
                             </div>
@@ -44,7 +47,7 @@ const styles = {
     container: css({
         backgroundColor: "#257700"
     }),
-    containerMonthBar : css({
+    containerMonthBar: css({
         backgroundColor: "#7f7f7f",
         color: "#fff",
         padding: "5px 15px 5px",
@@ -67,10 +70,10 @@ const styles = {
 
 MatchList.propTypes = {
     /** Elementos de la lista */
-    items : PropTypes.array,
+    items: PropTypes.array,
 
     /** Mostrar loading. */
-    showLoading : PropTypes.true
+    showLoading: PropTypes.true
 };
 
 export default MatchList;

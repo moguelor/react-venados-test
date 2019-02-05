@@ -1,6 +1,7 @@
-import {SELECT_TAB_COUP} from '../actionTypes';
+import { SELECT_TAB_COUP } from '../actionTypes';
 
-export default function (){
+/** Funcion para seleccionar la Tab especifica. */
+export default function () {
     return {
         type: SELECT_TAB_COUP,
         payload: ''

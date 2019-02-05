@@ -1,12 +1,12 @@
 import React from 'react';
-import {css} from 'glamor';
 import PropTypes from 'prop-types';
+import { css } from 'glamor';
 
-const Tab = ({text, isActive, handleClick}) => {
+const Tab = ({ text, isActive, handleClick }) => {
     return (
-        <div 
+        <div
             className={`col-6 ${css(styles.tab, isActive ? styles.active : styles.inactive)}`}
-            onClick = {handleClick}
+            onClick={handleClick}
         >
             {text}
         </div>
@@ -15,7 +15,7 @@ const Tab = ({text, isActive, handleClick}) => {
 
 const styles = {
     tab: css({
-        padding : 12,
+        padding: 12,
         fontSize: 15,
         cursor: 'pointer',
     }),
@@ -24,20 +24,20 @@ const styles = {
     }),
     inactive: css({
         backgroundColor: "#fac000",
-        border : "1px solid #fac000",
-        opacity : ".7"
+        border: "1px solid #fac000",
+        opacity: ".7"
     })
 }
 
 Tab.propTypes = {
     /** Texto del tab */
-    text : PropTypes.string,
+    text: PropTypes.string,
 
     /** Bandera que indica si el tab se encuentra activo o no. */
-    isActive : PropTypes.bool,
+    isActive: PropTypes.bool,
 
     /** Evento al hacer click en las tabs. */
-    handleClick : PropTypes.func
+    handleClick: PropTypes.func
 }
 
 export default Tab;

@@ -1,24 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {css} from 'glamor';
+import { css } from 'glamor';
 
-const Logo  = ({srcImage}) => {
+const Logo = ({ srcImage }) => {
     return (
         <div className={`col text-center ${styles.containerImage}`}>
-            <img className={styles.logo} alt="logo" src={srcImage} />
+            <img 
+                alt="logo" 
+                className={styles.logo} 
+                src={srcImage} 
+            />
         </div>
     );
 }
 
 const styles = {
-    containerImage : css({
-        padding : "0px 15px 15px 15px",
-        backgroundColor:"#fff"
+    containerImage: css({
+        padding: "0px 15px 15px 15px",
+        backgroundColor: "#fff"
     }),
-    logo : css({
-        width : 175,
+    logo: css({
+        width: 175,
         '@media(min-width: 768px)': {
-            width : 225,
+            width: 225,
         }
     })
 }

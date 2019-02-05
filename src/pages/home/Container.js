@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { createStructuredSelector } from 'reselect';
-import actions from './actions';
 import { connect } from 'react-redux';
 import { Tab, Logo, MatchList } from './components';
 import { IMG_URL_VENADOS } from './constants';
 import * as selectors from './selectors';
 import api from './api';
+import actions from './actions';
+
 
 class Container extends Component {
 
@@ -44,22 +45,38 @@ class Container extends Component {
                         handleClick={selectTabAscent}
                     />
                 </div>
-                
+
                 {
                     isActiveCoupTab
-                    ? <MatchList
-                        items={dataCoupMx}
-                        showLoading ={isFetching}
+                        ? <MatchList
+                            items={dataCoupMx}
+                            showLoading={isFetching}
 
-                    />
-                    : <MatchList
-                        items={dataAscentMX}
-                        showLoading ={isFetching}
-                    />
+                        />
+                        : <MatchList
+                            items={dataAscentMX}
+                            showLoading={isFetching}
+                        />
                 }
             </div>
         );
     }
+};
+
+const mapStateToProps = createStructuredSelector({
+    isActiveCoupTab: selectors.getIsActiveCoupTab,
+    isActiveAscentTab: selectors.getIsActiveAscentTab,
+    dataCoupMx: selectors.getDataCoupMX,
+    dataAscentMX: selectors.getDataAscentMX,
+    isFetching: selectors.getIsFetching
+});
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        selectTabAscent: () => dispatch(actions.selectTabAscent()),
+        selectTabCoup: () => dispatch(actions.selectTabCoup()),
+        fetchGames: () => dispatch(api.fetchGames())
+    };
 };
 
 Container.propTypes = {
@@ -76,29 +93,13 @@ Container.propTypes = {
     isActiveAscentTab: PropTypes.bool,
 
     /** Información de la copa mx */
-    dataCoupMx : PropTypes.array,
+    dataCoupMx: PropTypes.array,
 
     /** Infrmación de la liga acendente */
-    dataAscentMX : PropTypes.array,
+    dataAscentMX: PropTypes.array,
 
     /** Bandera para saber el momento de consumo del servicio. */
-    isFetching : PropTypes.bool
-};
-
-const mapStateToProps = createStructuredSelector({
-    isActiveCoupTab: selectors.getIsActiveCoupTab,
-    isActiveAscentTab: selectors.getIsActiveAscentTab,
-    dataCoupMx : selectors.getDataCoupMX,
-    dataAscentMX : selectors.getDataAscentMX,
-    isFetching : selectors.getIsFetching
-});
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        selectTabAscent: () => dispatch(actions.selectTabAscent()),
-        selectTabCoup: () => dispatch(actions.selectTabCoup()),
-        fetchGames: () => dispatch(api.fetchGames())
-    };
+    isFetching: PropTypes.bool
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Container);
