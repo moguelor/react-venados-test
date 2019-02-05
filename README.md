@@ -18,7 +18,7 @@ La estructura inicial del proyecto fue creado con [Create React App](https://git
 
 Se utiliza la metodologia llamada _"Structure By Features"_ para la organización de carpetas ya que por lo personal es la mejor estructura con la que he adaptado los proyectos para ser escalables y mantenibles. 
 
-[Mas información aqui.]([https://jaysoo.ca/2016/02/28/organizing-redux-application/])
+[Mas información aqui.](https://jaysoo.ca/2016/02/28/organizing-redux-application/)
 
 ```bash
 .
