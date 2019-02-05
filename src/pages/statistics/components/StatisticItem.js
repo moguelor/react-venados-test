@@ -9,7 +9,11 @@ const StatisticItem = ({ position, gamePlayed, goalDifference, points, team, ima
                 <span className={styles.position}>{position}</span>
             </div>
             <div className="col-5">
-                <img alt="" className={styles.image} src={image} />
+                <img 
+                    alt="" 
+                    className={styles.image} 
+                    src={image} 
+                />
                 <div className={styles.nameTeam}>{team}</div>
             </div>
             <div className="col-2">
@@ -19,7 +23,7 @@ const StatisticItem = ({ position, gamePlayed, goalDifference, points, team, ima
                 <span className={styles.number}>{goalDifference}</span>
             </div>
             <div className="col-2">
-                <span className={styles.number}>{ points }</span>
+                <span className={styles.number}>{points}</span>
             </div>
         </div>
     );
@@ -66,7 +70,7 @@ StatisticItem.propTypes = {
     position: PropTypes.number,
 
     /** Partidos jugados */
-    gamePlayed: PropTypes.number, 
+    gamePlayed: PropTypes.number,
 
     /** Diferencia de goles */
     goalDifference: PropTypes.number,

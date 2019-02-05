@@ -1,5 +1,5 @@
 import React from 'react';
-import {css} from 'glamor';
+import { css } from 'glamor';
 
 const TopBar = () => {
     return (
@@ -21,10 +21,10 @@ const TopBar = () => {
 }
 
 const styles = {
-    container : css({
+    container: css({
         backgroundColor: "#7f7f7f",
-        color : "#fff",
-        padding : 5,
+        color: "#fff",
+        padding: 5,
         fontSize: 14
     })
 };
