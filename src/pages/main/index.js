@@ -1,4 +1,4 @@
-import {NAME} from './constants';
+import { NAME } from './constants';
 import Container from './Container';
 import reducer from './reducer';
 

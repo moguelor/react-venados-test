@@ -4,8 +4,8 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { AppContainer } from 'react-hot-loader'
-import main from './pages/main';
 import configureStore, { history } from './configureStore'
+import main from './pages/main';
 import 'moment/locale/es.js';
 import './index.css';
 
@@ -22,7 +22,7 @@ ReactDOM.render(
     , document.getElementById('root'));
 
 
-    if (module.hot) {
+if (module.hot) {
     module.hot.accept('./pages/main/Container', () => {
         render(
             <AppContainer>

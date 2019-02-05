@@ -1,6 +1,9 @@
 import { HIDE_SIDEBAR } from '../actionTypes';
 
-export default function() {
+/**
+ * Función para ocultar el sidebar.
+ */
+export default function () {
     return {
         type: HIDE_SIDEBAR,
         payload: ''

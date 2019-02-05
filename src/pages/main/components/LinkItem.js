@@ -1,12 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { css } from 'glamor';
 
-const LinkItem = ({ label, to, onClick, isSelected }) => {
+const LinkItem = ({ label, onClick, isSelected }) => {
     return (
-            <div className={`d-flex align-items-center ${css(styles.item, !isSelected || styles.selected)}`} onClick={onClick}>
-                <div className={`${css(styles.circle, !isSelected || styles.circleActive)}`} />
-                <div className={`${css(styles.label, !isSelected || styles.labelActive)}`}>{label}</div>
-            </div>
+        <div
+            className={`d-flex align-items-center ${css(styles.item, !isSelected || styles.selected)}`}
+            onClick={onClick}
+        >
+            <div className={`${css(styles.circle, !isSelected || styles.circleActive)}`} />
+            <div className={`${css(styles.label, !isSelected || styles.labelActive)}`}>{label}</div>
+        </div>
     );
 }
 
@@ -42,5 +46,16 @@ const styles = {
         backgroundColor: "#4189f0"
     })
 };
+
+LinkItem.propTypes = {
+    /** Evento click */
+    onClick: PropTypes.func,
+
+    /** Texto a mostrar */
+    label : PropTypes.string,
+
+    /** Bandera para saber si esta seleccionada o no. */
+    isSelected : PropTypes.bool
+}
 
 export default LinkItem;

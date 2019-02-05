@@ -1,5 +1,5 @@
 import React from 'react';
-import {css} from 'glamor';
+import { css } from 'glamor';
 
 const NotFound = () => {
     return (
@@ -15,7 +15,7 @@ const styles = {
     text: css({
         fontSize: 23,
         fontStyle: "italic",
-        marginTop : 50
+        marginTop: 50
     })
 }
 
