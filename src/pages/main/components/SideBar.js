@@ -26,18 +26,18 @@ const SideBar = ({ isOpen, handleClickClose, location, redirect }) => {
                         <div className={`${styles.links} mb-auto`}>
                             <LinkItem
                                 label="Inicio"
-                                onClick={() => redirect('/')}
-                                isSelected={location === '/'}
+                                onClick={() => redirect('/react-venados-test')}
+                                isSelected={location === '/react-venados-test'}
                             />
                             <LinkItem
                                 label="Estadisticas"
-                                onClick={() => redirect('/statistics')}
-                                isSelected={location === '/statistics'}
+                                onClick={() => redirect('/react-venados-test/statistics')}
+                                isSelected={location === '/react-venados-test/statistics'}
                             />
                             <LinkItem
                                 label="Jugadores"
-                                onClick={() => redirect('/players')}
-                                isSelected={location === '/players'}
+                                onClick={() => redirect('/react-venados-test/players')}
+                                isSelected={location === '/react-venados-test/players'}
                             />
                         </div>
                         <div
