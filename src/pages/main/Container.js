@@ -27,7 +27,7 @@ class Container extends Component {
                 <div className="container">
                     <HeaderBar
                         handleClick={showSidebar}
-                        text={location === '/players' ? 'Jugadores' : ''}
+                        text={location === '/react-venados-test/players' ? 'Jugadores' : ''}
                     />
                     <SideBar
                         isOpen={isOpenSidebar}
@@ -38,17 +38,17 @@ class Container extends Component {
                     <Switch>
                         <Route
                             exact
-                            path="/"
+                            path="/react-venados-test"
                             component={home.Container}
                         />
                         <Route
                             exact
-                            path="/statistics"
+                            path="/react-venados-test/statistics"
                             component={statistics.Container}
                         />
                         <Route
                             exact
-                            path="/players"
+                            path="/react-venados-test/players"
                             component={players.Container}
                         />
                         <Route component={NotFound} />
